@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Goldfish Software Labs</title>
+    <link rel="icon" type="image/x-icon" href="log.ico">
+    
+    <!-- Consistent Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premiumBlue: '#0F172A',
+                        accentPurple: '#6D28D9',
+                        goldAccent: '#F59E0B',
+                        darkBase: '#0B1120'
+                    },
+                    backgroundImage: {
+                        'premium-gradient': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                        'gold-gradient': 'linear-gradient(90deg, #F59E0B 0%, #FCD34D 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .timer-number {
+            text-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-premiumBlue text-gray-100 min-h-screen flex flex-col">
+    <!-- Simplified Header -->
+    <header class="backdrop-blur-md bg-premiumBlue/90 w-full z-50 border-b border-white/10">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center space-x-4">
+                <img src="logo.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-accentPurple">
+                <span class="text-xl font-bold bg-gradient-to-r from-accentPurple to-goldAccent bg-clip-text text-transparent">
+                    Goldfish Software Labs
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-16">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Animated Logo -->
+            <div class="animate-pulse mb-12">
+                <div class="w-32 h-32 rounded-full border-4 border-accentPurple/30 mx-auto flex items-center justify-center">
+                    <img src="logo.jpg" alt="Logo" class="w-24 h-24 rounded-full">
+                </div>
+            </div>
+
+            <!-- Coming Soon Text -->
+            <h1 class="text-5xl md:text-6xl font-bold mb-8">
+                <span class="bg-gradient-to-r from-goldAccent to-accentPurple bg-clip-text text-transparent">
+                    Coming Soon
+                </span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-xl mx-auto mb-12">
+                We're crafting something extraordinary. Stay tuned for our grand reveal!
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-box rounded-2xl p-8 max-w-2xl mx-auto mb-12">
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="p-4">
+                        <div class="timer-number text-4xl font-bold text-goldAccent mb-2" id="days">00</div>
+                        <div class="text-gray-400 text-sm">Days</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="timer-number text-4xl font-bold text-goldAccent mb-2" id="hours">00</div>
+                        <div class="text-gray-400 text-sm">Hours</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="timer-number text-4xl font-bold text-goldAccent mb-2" id="minutes">00</div>
+                        <div class="text-gray-400 text-sm">Minutes</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="timer-number text-4xl font-bold text-goldAccent mb-2" id="seconds">00</div>
+                        <div class="text-gray-400 text-sm">Seconds</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Form -->
+            <div class="max-w-md mx-auto">
+                <p class="text-gray-400 mb-4">Get notified when we launch</p>
+                <form class="flex gap-2">
+                    <input type="email" placeholder="Enter your email" 
+                           class="input-field flex-grow p-3 rounded-lg bg-darkBase border border-accentPurple/20 focus:border-accentPurple focus:ring-2 focus:ring-accentPurple">
+                    <button type="submit" 
+                            class="bg-accentPurple text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all">
+                        Notify Me
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Set launch date (example: 30 days from now)
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 30);
+
+        // Update countdown every second
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.querySelector('.countdown-box').innerHTML = '<div class="text-2xl text-goldAccent">Launching Now!</div>';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
