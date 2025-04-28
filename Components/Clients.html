@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients - Goldfish Software Labs</title>
+    <link rel="icon" type="image/x-icon" href="log.ico">
+    
+    <!-- Consistent Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premiumBlue: '#0F172A',
+                        accentPurple: '#6D28D9',
+                        goldAccent: '#F59E0B',
+                        darkBase: '#0B1120'
+                    },
+                    backgroundImage: {
+                        'premium-gradient': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+                        'gold-gradient': 'linear-gradient(90deg, #F59E0B 0%, #FCD34D 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        .client-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .partner-badge {
+            background: linear-gradient(45deg, #6D28D9 0%, #F59E0B 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-premiumBlue text-gray-100">
+    <!-- Premium Header -->
+    <header class="backdrop-blur-md bg-premiumBlue/90 fixed top-0 w-full z-50 border-b border-white/10">
+        <!-- Same header as previous pages -->
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="logo.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-accentPurple">
+                <a href="index.html" class="text-xl font-bold bg-gradient-to-r from-accentPurple to-goldAccent bg-clip-text text-transparent">
+                    Goldfish Software Labs
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="Components/About.html" class="text-gray-300 hover:text-white transition-all font-medium">
+                    About
+                </a>
+                <a href="Components/Services.html" class="text-gray-300 hover:text-white transition-all font-medium">
+                    Services
+                </a>
+                <a href="Components/Clients.html" class="text-gray-300 hover:text-white transition-all font-medium">
+                    Clients
+                </a>
+                <a href="Components/Careers.html" class="text-gray-300 hover:text-white transition-all font-medium">
+                    Careers
+                </a>
+                <a href="Components/Contacts.html" 
+                   class="gold-hover bg-accentPurple text-white px-6 py-2 rounded-full hover:shadow-xl transition-all">
+                    Get Started
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative mt-20 min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 bg-[url('./Components/clients.jpeg')] bg-cover bg-center opacity-20"></div>
+        <div class="relative z-10 container mx-auto px-4 py-24 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                <span class="bg-gradient-to-r from-goldAccent to-white bg-clip-text text-transparent">
+                    Trusted By Innovators
+                </span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Collaborating with visionary companies to transform industries through technology
+            </p>
+        </div>
+    </section>
+
+    <!-- Client Showcase -->
+    <section class="py-20 bg-darkBase">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-accentPurple to-goldAccent bg-clip-text text-transparent">
+                        Our Partners
+                    </span>
+                </h2>
+                <p class="text-gray-400 max-w-xl mx-auto">
+                    We've helped these industry leaders achieve their digital transformation goals
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
+                <!-- Client Logo 1 -->
+                <div class="p-6 flex items-center justify-center">
+                    <img src="/placeholders/client-1.svg" alt="Client 1" class="client-logo h-20 w-auto">
+                </div>
+                
+                <!-- Add more client logos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-20 bg-premiumBlue">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-goldAccent to-accentPurple bg-clip-text text-transparent">
+                        Success Stories
+                    </span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="testimonial-card p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-accentPurple/10 flex items-center justify-center">
+                            <span class="text-2xl">🚀</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold">Fintech Transformation</h3>
+                            <p class="text-gray-400">Financial Services</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        "Goldfish Labs revolutionized our mobile banking platform, increasing user engagement by 150%"
+                    </p>
+                    <div class="partner-badge px-4 py-2 rounded-full text-sm w-fit">Featured Case Study</div>
+                </div>
+
+                <!-- Add more case studies -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-darkBase">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-accentPurple to-goldAccent bg-clip-text text-transparent">
+                        Client Testimonials
+                    </span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <img src="/placeholders/client-1.jpg" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-400 text-sm">CEO, Tech Innovators</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">"Their technical expertise helped us scale globally"</p>
+                    <div class="flex items-center">
+                        <div class="text-goldAccent">★★★★★</div>
+                    </div>
+                </div>
+
+                <!-- Add more testimonials -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership CTA -->
+    <section class="py-20 bg-gradient-to-br from-accentPurple to-premiumBlue">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">
+                <span class="bg-gradient-to-r from-goldAccent to-white bg-clip-text text-transparent">
+                    Ready to Transform Your Business?
+                </span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join our growing list of satisfied clients and experience the Goldfish difference
+            </p>
+            <a href="Contacts.html" 
+               class="inline-block bg-goldAccent text-premiumBlue px-8 py-4 rounded-full hover:bg-opacity-90 transition-all font-semibold">
+                Start Your Journey
+            </a>
+        </div>
+    </section>
+</body>
+</html>
