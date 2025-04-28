@@ -60,7 +60,7 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <img src="logo.jpg" alt="Logo" class="w-12 h-12 rounded-full border-2 border-accentPurple">
-                <a href=".../index.html" class="text-xl font-bold bg-gradient-to-r from-accentPurple to-goldAccent bg-clip-text text-transparent">
+                <a href="../index.html" class="text-xl font-bold bg-gradient-to-r from-accentPurple to-goldAccent bg-clip-text text-transparent">
                     Goldfish Software Labs
                 </a>
             </div>
@@ -176,10 +176,10 @@
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold mb-2">Headquarters</h3>
-                                <p class="text-gray-400">
-                                    Business Street<br>
-                                    Scotland, United Kingdom
+                                <p class="text-gray-400, hover:text-goldAccent">
+                                    Business Street
                                 </p>
+                                <p class="text-gray-400, hover:text-goldAccent">Scotland, United Kingdom</p>
                             </div>
                         </div>
 
@@ -252,5 +252,95 @@
             </div>
         </div>
     </section>
+        <!-- JavaScript -->
+        <script>
+            // Set service based on query parameter
+            window.onload = function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const service = urlParams.get('service');
+    
+                if (service) {
+                    document.getElementById("service").value = service;
+                }
+            };
+    
+            // Form validation
+            function validateForm() {
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let service = document.getElementById("service").value;
+                let message = document.getElementById("message").value.trim();
+    
+                if (!name || !email || !service || !message) {
+                    alert("Please fill in all fields before proceeding.");
+                    return false;
+                }
+                return true;
+            }
+    
+            // Send WhatsApp Message
+            function sendWhatsApp() {
+                if (!validateForm()) return;
+    
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let service = document.getElementById("service").value;
+                let message = document.getElementById("message").value;
+    
+                let whatsappMessage =
+                    `*Name:* ${name}.
+    *Email:* ${email}. 
+    *Services:* ${service}. 
+    *Message :* ${message}`;
+                let whatsappURL = `https://wa.me/447442349889?text=${encodeURIComponent(whatsappMessage)}`;
+                window.open(whatsappURL, "_blank");
+            }
+    
+            // Send Email
+            function sendEmail() {
+                if (!validateForm()) return;
+    
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let service = document.getElementById("service").value.trim();
+                let message = document.getElementById("message").value.trim();
+    
+                if (!name || !email || !service || !message) {
+                    alert("Please fill out all fields.");
+                    return;
+                }
+    
+                let subject = `Inquiry About ${service}`;
+                let body = `Name: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`;
+    
+                let mailTo = `mailto:info.goldfishsoftwarelabs@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+                if (isMobileDevice()) {
+                    window.location.href = mailTo; // Opens default mail app on mobile
+                } else {
+                    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=info.goldfishsoftwarelabs@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank"); // Opens Gmail in a new tab on PC
+                }
+            }
+    
+            // Detect if the user is on a mobile device
+            function isMobileDevice() {
+                return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            }
+    
+        </script>
+        <!-- Mobile Menu Script -->
+        <script>
+            const menuToggle = document.getElementById("menu-toggle");
+            const sidebar = document.getElementById("sidebar");
+            const closeMenu = document.getElementById("close-menu");
+    
+            menuToggle.addEventListener("click", () => {
+                sidebar.classList.add("open");
+            });
+    
+            closeMenu.addEventListener("click", () => {
+                sidebar.classList.remove("open");
+            });
+        </script>
 </body>
 </html>

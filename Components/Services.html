@@ -99,55 +99,166 @@
     </section>
 
     <!-- Services Grid -->
-    <section class="relative py-20 bg-darkBase">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                <!-- Software Development Card -->
-                <div class="service-card p-8 rounded-2xl">
-                    <div class="icon-container w-14 h-14 rounded-xl mb-6 flex items-center justify-center">
-                        <i class="fas fa-code text-accentPurple text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Software Development</h3>
-                    <p class="text-gray-400 mb-6">Custom software solutions to streamline your business processes.</p>
-                    <button onclick="showModal('software')" 
-                            class="text-goldAccent hover:underline font-medium">
-                        Read more →
-                    </button>
+    <section class="container mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <!-- Software Development -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-code text-2xl text-goldAccent"></i>
                 </div>
-
-                <!-- Repeat for other services with unique icons -->
-                <!-- Mobile App Development -->
-                <div class="service-card p-8 rounded-2xl">
-                    <div class="icon-container w-14 h-14 rounded-xl mb-6 flex items-center justify-center">
-                        <i class="fas fa-mobile-alt text-accentPurple text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Mobile App Development</h3>
-                    <p class="text-gray-400 mb-6">User-friendly mobile applications for iOS and Android platforms.</p>
-                    <button onclick="showModal('mobile')" 
-                            class="text-goldAccent hover:underline font-medium">
-                        Read more →
-                    </button>
+                <h3 class="text-xl font-semibold mb-4">Software Development</h3>
+                <p class="text-gray-400 mb-6">Custom software solutions to streamline your business processes.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium"
+                        onclick="showModal('software')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Desktop Application Development -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-desktop text-2xl text-goldAccent"></i>
                 </div>
-
-                <!-- Product Design -->
-                <div class="service-card p-8 rounded-2xl">
-                    <div class="icon-container w-14 h-14 rounded-xl mb-6 flex items-center justify-center">
-                        <i class="fas fa-paint-brush text-accentPurple text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Product Design</h3>
-                    <p class="text-gray-400 mb-6">Design beautiful and intuitive experiences.</p>
-                    <button onclick="showModal('design')" 
-                            class="text-goldAccent hover:underline font-medium">
-                        Read more →
-                    </button>
+                <h3 class="text-xl font-semibold mb-4">Desktop Application Development</h3>
+                <p class="text-gray-400 mb-6">Robust and scalable desktop applications tailored to your needs.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('desktop')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Mobile App Development -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-2xl text-goldAccent"></i>
                 </div>
-
-                <!-- Add remaining service cards following the same pattern -->
-
+                <h3 class="text-xl font-semibold mb-4">Mobile App Development</h3>
+                <p class="text-gray-400 mb-6">User-friendly mobile applications for iOS and Android platforms.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('mobile')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Product Development -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-check text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Product Development</h3>
+                <p class="text-gray-400 mb-6">Build a product that customers love.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('product')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Product Design -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-paint-brush text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Product Design</h3>
+                <p class="text-gray-400 mb-6">Design beautiful and intuitive experiences.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('design')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- User Research -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-search text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">User Research</h3>
+                <p class="text-gray-400 mb-6">Understand your users and what they need.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('research')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- SEO & Digital Marketing -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">SEO & Digital Marketing</h3>
+                <p class="text-gray-400 mb-6">Boost your online presence with expert strategies.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('seo')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Growth Marketing -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-bullhorn text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Growth Marketing</h3>
+                <p class="text-gray-400 mb-6">Grow your user base and revenue.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('marketing')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Tech Strategy & Consulting -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-lightbulb text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Tech Strategy & Consulting</h3>
+                <p class="text-gray-400 mb-6">Make smart decisions about technology.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('strategy')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Research & Data Analysis -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-flask text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Research & Data Analysis</h3>
+                <p class="text-gray-400 mb-6">Actionable insights from data.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('data')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Thesis & Academic Writing -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-book text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Thesis & Academic Writing</h3>
+                <p class="text-gray-400 mb-6">High-quality academic research writing services.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('thesis')">
+                    Read more →
+                </button>
+            </div>
+    
+            <!-- Fundraising & Investment -->
+            <div class="service-card group p-8 rounded-2xl bg-darkBase border border-accentPurple/20 transition-all hover:border-accentPurple/40">
+                <div class="w-14 h-14 rounded-xl bg-accentPurple/10 flex items-center justify-center mb-6">
+                    <i class="fas fa-hand-holding-usd text-2xl text-goldAccent"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Fundraising & Investment</h3>
+                <p class="text-gray-400 mb-6">Raise money from visionary investors.</p>
+                <button class="text-goldAccent hover:text-accentPurple transition-colors font-medium" 
+                        onclick="showModal('fundraising')">
+                    Read more →
+                </button>
             </div>
         </div>
     </section>
-
+    
     <!-- Premium Modal -->
     <div id="serviceModal" class="fixed inset-0 flex items-center justify-center modal-overlay hidden z-50 p-4">
         <div class="bg-darkBase rounded-2xl p-8 max-w-2xl w-full border border-accentPurple/30 relative">
@@ -188,6 +299,60 @@
             const selectedService = services[service];
             document.getElementById('serviceTitle').textContent = selectedService.title;
             document.getElementById('serviceDescription').textContent = selectedService.description;
+            document.getElementById('contactButton').href = `Contacts.html?service=${selectedService.title}`;
+            document.getElementById('serviceModal').classList.remove('hidden');
+        }
+
+        function hideModal() {
+            document.getElementById('serviceModal').classList.add('hidden');
+        }
+        function showModal(service) {
+            const services = {
+                software: {
+                    title: "Software Development",
+                    description: "Custom software solutions to streamline your business processes."
+                },
+                desktop: {
+                    title: "Desktop Application Development",
+                    description: "Robust and scalable desktop applications tailored to your needs."
+                },
+                mobile: {
+                    title: "Mobile App Development",
+                    description: "User-friendly mobile applications for iOS and Android platforms."
+                },
+                product: {
+                    title: "Product Development",
+                    description: "Build a product that customers love."
+                },
+                design: {
+                    title: "Product Design",
+                    description: "Design beautiful and intuitive experiences."
+                },
+                research: {
+                    title: "User Research",
+                    description: "Understand your users and what they need."
+                },
+                seo: {
+                    title: "SEO & Digital Marketing",
+                    description: "Boost your online presence with expert SEO and marketing strategies."
+                },
+                marketing: {
+                    title: "Growth Marketing",
+                    description: "Grow your user base and revenue."
+                },
+                strategy: {
+                    title: "Tech Strategy & Consulting",
+                    description: "Make smart decisions about technology."
+                },
+                data: {
+                    title: "Research & Data Analysis",
+                    description: "Actionable insights from data."
+                }
+            };
+
+            const selectedService = services[service];
+            document.getElementById('serviceTitle').innerText = selectedService.title;
+            document.getElementById('serviceDescription').innerText = selectedService.description;
             document.getElementById('contactButton').href = `Contacts.html?service=${selectedService.title}`;
             document.getElementById('serviceModal').classList.remove('hidden');
         }
